@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Capture ES Module</title>
+  <style>
+    body { font-family: sans-serif; padding: 20px; }
+    button { margin: 5px; padding: 10px; cursor: pointer; }
+    #results { margin-top: 20px; border-top: 1px solid #ccc; padding-top: 20px; }
+    video, img { max-width: 100%; border: 1px solid #ddd; }
+    canvas { display: none; } /* Sembunyikan canvas, hanya untuk proses */
+    pre { background-color: #f4f4f4; padding: 10px; border-radius: 5px; }
+  </style>
+</head>
+<body>
+
+  <h1>Demo Media Capture dengan Vanilla JS ES Module</h1>
+
+  <div>
+    <button id="getLocationBtn">Dapatkan Lokasi</button>
+    <button id="startVideoBtn">Mulai Kamera (Video)</button>
+    <button id="startAudioBtn">Mulai Mikrofon (Audio)</button>
+    <button id="capturePhotoBtn">Ambil Foto</button>
+    <button id="stopAllBtn">Hentikan Semua Media</button>
+  </div>
+
+  <div id="results">
+    <h3>Hasil:</h3>
+    <div id="locationResult"></div>
+    <video id="videoElement" autoplay playsinline></video>
+    <canvas id="canvasElement"></canvas>
+    <div id="photoResult"></div>
+    <div id="audioStatus"></div>
+  </div>
+
+  <!-- Gunakan type="module" untuk memuat ES Module -->
+  <script type="module" src="main.js"></script>
+
+</body>
+</html>
